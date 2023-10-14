@@ -162,14 +162,14 @@ h6,
     position: fixed;
     width: 100%;
     background: #ffffff;
-    border-bottom: #1672b7 1px solid;
+    border-bottom: var(--dark) 1px solid;
   }
   .navbar-dark .navbar-nav .nav-link,
   .navbar-dark .navbar-nav .nav-link.show,
   .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 10px 0;
     color: var(--dark);
-    border-bottom: #1672b7 1px solid;
+    border-bottom: var(--dark) 1px solid;
   }
   .navbar-dark .navbar-nav .nav-link:first-child {
     margin-top: 20px;
@@ -784,5 +784,12 @@ h6,
   }
   .cyber-logo img {
     padding: 10px !important ;
+  }
+}
+
+/******* under *******/
+@media (max-width: 542px) {
+  .under img {
+    width: 300px !important ;
   }
 }
