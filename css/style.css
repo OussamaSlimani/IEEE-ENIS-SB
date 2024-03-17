@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Meow+Script&display=swap");
+
 /********** Template CSS **********/
 :root {
   --primary: #095392;
@@ -55,6 +57,14 @@
   visibility: visible;
   opacity: 1;
 }
+
+/* Dark mode styles 
+.dark-mode {
+  background-color: #061429;
+  color: #ffffff; 
+  transition: background-color 0.5s ease, color 0.5s ease; 
+}
+*/
 
 /*** Heading ***/
 h1,
@@ -148,10 +158,6 @@ h6,
   color: #1672b7;
 }
 
-.navbar-dark .navbar-brand h1 {
-  color: #ffffff;
-}
-
 .navbar-dark .navbar-toggler {
   color: var(--primary) !important;
   border-color: var(--primary) !important;
@@ -173,10 +179,6 @@ h6,
   }
   .navbar-dark .navbar-nav .nav-link:first-child {
     margin-top: 20px;
-  }
-
-  .navbar-dark .navbar-brand img {
-    max-width: 180px;
   }
 }
 
@@ -227,6 +229,10 @@ h6,
   z-index: 1;
 }
 
+.carousel-caption h5 {
+  font-family: "Meow Script", cursive;
+}
+
 @media (max-width: 576px) {
   .carousel-item {
     min-height: 400px;
@@ -236,15 +242,6 @@ h6,
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .carousel-caption h5 {
-    font-size: 18px;
-    font-weight: 500 !important;
-  }
-
-  .carousel-caption h1 {
-    font-size: 35px;
-    font-weight: 600 !important;
   }
 }
 
@@ -651,7 +648,7 @@ h6,
   }
   .body-about-us {
     padding: 25px;
-    margin: 0px;
+    margin: -20px;
   }
 }
 
@@ -749,7 +746,7 @@ h6,
 
 /*--------------------------------------------------------------
 # Chapters Section
--------------------------------------------------------------- */
+
 .supporter-logo {
   padding-left: 20px;
   padding-right: 20px;
@@ -786,10 +783,175 @@ h6,
     padding: 10px !important ;
   }
 }
+-------------------------------------------------------------- */
 
 /******* under *******/
 @media (max-width: 542px) {
   .under img {
     width: 300px !important ;
   }
+}
+
+/* ************************ */
+
+.hero-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 120px;
+  position: relative;
+  margin-top: -60px;
+  z-index: 1;
+}
+
+.wave1 use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave2 use {
+  animation: move-forever2 8s linear infinite;
+  animation-delay: -2s;
+}
+
+.wave3 use {
+  animation: move-forever3 6s linear infinite;
+  animation-delay: -2s;
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-waves {
+    display: none;
+  }
+}
+
+/* ********************* */
+.fa-star {
+  margin: 0.4em;
+  animation: starAnimation 1.2s infinite alternate;
+}
+
+.small-star {
+  font-size: 1.5em;
+  padding-top: 1.5rem;
+}
+
+.big-star {
+  font-size: 2.5em;
+}
+
+@keyframes starAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.4em);
+  }
+}
+
+.stars-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+}
+
+/*--------------------------------------------------------------
+# Clients 22
+--------------------------------------------------------------*/
+.clients .clients-wrap {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+
+.clients .client-logo {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  overflow: hidden;
+  background: #fff;
+  height: 120px;
+}
+
+.clients .client-logo img {
+  height: 100%;
+  transition: 0.3s;
+}
+
+.clients .client-logo:hover img {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Clients 3
+--------------------------------------------------------------*/
+.chapters-carousel .owl-dots {
+  margin-top: 15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.chapters-carousel .owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  background: #dddddd;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.chapters-carousel .owl-dot.active {
+  background: var(--primary);
+}
+
+.chapters-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  overflow: hidden;
+  background: #fff;
+  height: 120px;
+}
+
+.chapters-logo img {
+  width: 50%;
 }

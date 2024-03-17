@@ -20,7 +20,7 @@
     const isScrolled = $(window).scrollTop() > 45;
 
     if (isScrolled) {
-      $(".navbar").addClass("sticky-top shadow-sm");
+      $(".navbar").addClass("sticky-top shadow-sm  animated slideInDown");
       if (!isWideScreen) {
         $(".btn-outline-light").toggleClass(
           "btn-outline-light btn-outline-dark"
@@ -33,7 +33,7 @@
       $("#main").hide();
       $("#second").show();
     } else {
-      $(".navbar").removeClass("sticky-top shadow-sm");
+      $(".navbar").removeClass("sticky-top shadow-sm  animated slideInDown");
       if (!isWideScreen) {
         $(".btn-outline-dark").toggleClass(
           "btn-outline-dark btn-outline-light"
@@ -70,10 +70,35 @@
     return false;
   });
 
+  // Vendor carousel
+  $(".chapters-carousel").owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 1000,
+    dots: true,
+    loop: true,
+    center: true,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      576: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 5,
+      },
+    },
+  });
+
   // Testimonials carousel
   $(".testimonial-carousel").owlCarousel({
     autoplay: true,
-    smartSpeed: 1500,
+    autoplayTimeout: 5000,
+    smartSpeed: 1000,
     dots: true,
     loop: true,
     center: true,
@@ -93,3 +118,47 @@
     },
   });
 })(jQuery);
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+  const body = document.body;
+  const darkModeIcon = document.getElementById("darkModeIcon");
+
+  // Check the current mode
+  const isDarkMode = body.classList.contains("dark-mode");
+
+  // Toggle the dark mode class on the body
+  body.classList.replace("light-mode", "dark-mode");
+
+  // Update the Font Awesome icon and body class based on the current mode
+  if (isDarkMode) {
+    darkModeIcon.className = "fas fa-sun animated bounceIn";
+    body.classList.replace("dark-mode", "light-mode");
+  } else {
+    darkModeIcon.className = "fas fa-moon animated bounceIn";
+    body.classList.replace("light-mode", "dark-mode");
+  }
+
+  // Remove the bounceIn class after the animation completes
+  darkModeIcon.addEventListener(
+    "animationend",
+    () => {
+      darkModeIcon.classList.remove("animated", "bounceIn");
+    },
+    { once: true }
+  );
+
+  // Store the user's preference in localStorage
+  localStorage.setItem("darkMode", !isDarkMode);
+}
+
+// Check user's preference from localStorage on page load
+const savedDarkMode = localStorage.getItem("darkMode");
+if (savedDarkMode) {
+  document.body.classList.toggle("dark-mode", savedDarkMode === "true");
+
+  // Update the Font Awesome icon based on the saved mode
+  const darkModeIcon = document.getElementById("darkModeIcon");
+  darkModeIcon.className =
+    savedDarkMode === "true" ? "fas fa-moon" : "fas fa-sun";
+}
