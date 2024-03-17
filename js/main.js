@@ -119,46 +119,47 @@
   });
 })(jQuery);
 
-// Function to toggle dark mode
+/* ================= Toggle dark/night mode ============== */
 function toggleDarkMode() {
   const body = document.body;
-  const darkModeIcon = document.getElementById("darkModeIcon");
-
-  // Check the current mode
-  const isDarkMode = body.classList.contains("dark-mode");
-
-  // Toggle the dark mode class on the body
-  body.classList.replace("light-mode", "dark-mode");
-
-  // Update the Font Awesome icon and body class based on the current mode
-  if (isDarkMode) {
-    darkModeIcon.className = "fas fa-sun animated bounceIn";
-    body.classList.replace("dark-mode", "light-mode");
-  } else {
-    darkModeIcon.className = "fas fa-moon animated bounceIn";
-    body.classList.replace("light-mode", "dark-mode");
-  }
-
-  // Remove the bounceIn class after the animation completes
-  darkModeIcon.addEventListener(
-    "animationend",
-    () => {
-      darkModeIcon.classList.remove("animated", "bounceIn");
-    },
-    { once: true }
+  const isDarkMode = !body.classList.contains("dark-mode");
+  body.classList.toggle("dark-mode", isDarkMode);
+  updateTextColors(isDarkMode);
+  updateIcon(isDarkMode);
+  localStorage.setItem("darkMode", isDarkMode);
+  const changeModeAnimationContainer = document.querySelector(
+    ".change-mode-animation-container"
   );
-
-  // Store the user's preference in localStorage
-  localStorage.setItem("darkMode", !isDarkMode);
+  changeModeAnimationContainer.classList.remove("d-none");
+  setTimeout(() => {
+    changeModeAnimationContainer.classList.add("d-none");
+  }, 2000);
+}
+function updateTextColors(isDarkMode) {
+  const textElements = document.querySelectorAll(".text-dark, .text-light");
+  textElements.forEach((element) => {
+    if (isDarkMode) {
+      element.classList.replace("text-dark", "text-light");
+    } else {
+      element.classList.replace("text-light", "text-dark");
+    }
+  });
+}
+function updateIcon(isDarkMode) {
+  const icon = document.getElementById("darkModeIcon");
+  if (isDarkMode) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  } else {
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+  }
 }
 
-// Check user's preference from localStorage on page load
 const savedDarkMode = localStorage.getItem("darkMode");
 if (savedDarkMode) {
-  document.body.classList.toggle("dark-mode", savedDarkMode === "true");
-
-  // Update the Font Awesome icon based on the saved mode
-  const darkModeIcon = document.getElementById("darkModeIcon");
-  darkModeIcon.className =
-    savedDarkMode === "true" ? "fas fa-moon" : "fas fa-sun";
+  const isDarkMode = savedDarkMode === "true";
+  document.body.classList.toggle("dark-mode", isDarkMode);
+  updateTextColors(isDarkMode);
+  updateIcon(isDarkMode);
 }

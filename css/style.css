@@ -59,8 +59,44 @@
 /* =============== Dark mode styles =============== */
 .dark-mode {
   background-color: var(--dark);
-  color: #ffffff;
   transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.change-mode-animation {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #ffffff;
+  border: 2px solid;
+  position: relative;
+}
+.change-mode-animation::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+  100% {
+    inset: 0;
+  }
+}
+
+.change-mode-animation-container {
+  background-color: rgba(9, 30, 62, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*=============== Heading ===============*/
@@ -162,12 +198,17 @@ h6,
 }
 
 @media (max-width: 991.98px) {
+  .navbar {
+    background: #ffffff;
+  }
+
   .sticky-top.navbar-dark {
     position: fixed;
     width: 100%;
     background: #ffffff;
     border-bottom: var(--dark) 1px solid;
   }
+
   .navbar-dark .navbar-nav .nav-link,
   .navbar-dark .navbar-nav .nav-link.show,
   .sticky-top.navbar-dark .navbar-nav .nav-link {
@@ -398,7 +439,7 @@ h6,
   align-items: center;
   border: 1px solid #eee;
   overflow: hidden;
-  background: #fff;
+  background: var(--light);
   height: 120px;
 }
 
@@ -436,11 +477,13 @@ h6,
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
-  background: #ffffff !important;
-  box-shadow: 0 0 30px #dddddd;
+  scale: 1.09;
+  margin-left: 12px;
+  margin-right: 12px;
+  border: #e0e5fa 1px solid;
 }
 
-/*** Section Title ***/
+/*=============== Section Title ===============*/
 .section-title::before {
   position: absolute;
   content: "";
@@ -525,6 +568,16 @@ h6,
   100% {
     left: 0;
   }
+}
+/* ======== Foter ======== */
+@media (min-width: 767.98px) {
+  .footer-about {
+    margin-bottom: -75px;
+  }
+}
+
+.border-footer {
+  border-top: var(--light) 1px solid;
 }
 
 /*** Team ***/
@@ -622,12 +675,6 @@ h6,
 
 .link-animated a:hover {
   padding-left: 10px;
-}
-
-@media (min-width: 767.98px) {
-  .footer-about {
-    margin-bottom: -75px;
-  }
 }
 
 /*** Service2 ***/
