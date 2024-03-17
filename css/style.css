@@ -569,7 +569,7 @@ h6,
     left: 0;
   }
 }
-/* ======== Foter ======== */
+/* ======== Footer ======== */
 @media (min-width: 767.98px) {
   .footer-about {
     margin-bottom: -75px;
@@ -578,6 +578,59 @@ h6,
 
 .border-footer {
   border-top: var(--light) 1px solid;
+}
+
+/* ============= chapters =============== */
+.chapters .chapter-box-container {
+  border-top: #eee 1px solid;
+  border-left: #eee 1px solid;
+  border-right: #eee 1px solid;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.chapters .chapter-box {
+  height: 100%;
+  padding: 20px;
+  background-color: var(--light);
+  border-radius: 5px;
+  height: 470px;
+}
+
+.chapters .chapter-box h3 {
+  color: #444444;
+  font-weight: 700;
+}
+.chapters .chapter-box img {
+  width: 250px;
+}
+
+.chapters .chapter-box.blue {
+  border-bottom: 6px solid #4988bf;
+}
+.chapters .chapter-box.blue-2 {
+  border-bottom: 6px solid #16607d;
+}
+.chapters .chapter-box.orange {
+  border-bottom: 6px solid #f9a31a;
+}
+.chapters .chapter-box.green {
+  border-bottom: 6px solid #147346;
+}
+.chapters .chapter-box.green-2 {
+  border-bottom: 6px solid #7eb23a;
+}
+.chapters .chapter-box.red {
+  border-bottom: 6px solid #8c2a3c;
+}
+.chapters .chapter-box.purple {
+  border-bottom: 6px solid #471347;
+}
+.chapters .chapter-box.red-2 {
+  border-bottom: 6px solid #d93b48;
+}
+
+.chapters .chapter-box-container:hover {
+  transform: scale(1.01);
 }
 
 /*** Team ***/
@@ -680,54 +733,6 @@ h6,
 /*** Service2 ***/
 .service-item {
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.06);
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services .service-box-container {
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-  transition: 0.3s;
-}
-.services .service-box {
-  height: 100%;
-  padding: 20px;
-
-  border-radius: 5px;
-}
-
-.services .service-box h3 {
-  color: #444444;
-  font-weight: 700;
-}
-
-.services .service-box.blue {
-  border-bottom: 6px solid #4988bf;
-}
-.services .service-box.blue-2 {
-  border-bottom: 6px solid #16607d;
-}
-.services .service-box.orange {
-  border-bottom: 6px solid #f9a31a;
-}
-.services .service-box.green {
-  border-bottom: 6px solid #147346;
-}
-.services .service-box.green-2 {
-  border-bottom: 6px solid #7eb23a;
-}
-.services .service-box.red {
-  border-bottom: 6px solid #8c2a3c;
-}
-.services .service-box.purple {
-  border-bottom: 6px solid #471347;
-}
-.services .service-box.red-2 {
-  border-bottom: 6px solid #d93b48;
-}
-
-.services .service-box-container:hover {
-  transform: scale(1.01);
 }
 
 /*--------------------------------------------------------------
