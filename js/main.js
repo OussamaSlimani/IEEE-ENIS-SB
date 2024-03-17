@@ -70,8 +70,32 @@
     return false;
   });
 
-  // Vendor carousel
+  // Chapters carousel
   $(".chapters-carousel").owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 1000,
+    dots: true,
+    loop: true,
+    center: true,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      576: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 5,
+      },
+    },
+  });
+
+  // teams carousel
+  $(".teams-carousel").owlCarousel({
     autoplay: true,
     autoplayTimeout: 5000,
     smartSpeed: 1000,

@@ -580,7 +580,7 @@ h6,
   border-top: var(--light) 1px solid;
 }
 
-/* ============= chapters =============== */
+/* ============= chapters Details =============== */
 .chapters .chapter-box-container {
   border-top: #eee 1px solid;
   border-left: #eee 1px solid;
@@ -633,70 +633,81 @@ h6,
   transform: scale(1.01);
 }
 
-/*** Team ***/
-.team-item {
-  transition: 0.5s;
+/* ============= More Details =============== */
+.more .more-box-container {
+  border: #eee 1px solid;
+  border-radius: 5px;
+  transition: 0.3s;
 }
-
-.team-social {
-  position: absolute;
-  width: 100%;
+.more .more-box {
   height: 100%;
-  top: 0;
-  left: 0;
+  padding: 20px;
+  border-radius: 5px;
+  height: 390px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+.more .more-box img {
+  width: 250px;
+}
+.more .more-box-container:hover {
+  transform: scale(1.01);
+}
+
+/*** ============= goals ============= ***/
+.feature-item,
+.goals-item {
+  height: 100%;
+  transition: 0.5s;
+}
+
+.feature-item:hover {
+  margin-top: -15px;
+}
+
+.goals-item {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  border: #eee 1px solid;
+}
+
+.goals-item * {
+  transition: 0.5s;
+}
+
+.goals-item:hover {
+  background: var(--primary);
+}
+
+.goals-item:hover * {
+  color: #ffffff !important;
+}
+
+/* ============ Teams  ============*/
+.teams-carousel .owl-dots {
+  margin-top: 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  transition: 0.5s;
 }
 
-.team-social a.btn {
+.teams-carousel .owl-dot {
   position: relative;
-  margin: 0 3px;
-  margin-top: 100px;
-  opacity: 0;
-}
-
-.team-item:hover {
-  box-shadow: 0 0 30px #dddddd;
-}
-
-.team-item:hover .team-social {
-  background: rgba(9, 30, 62, 0.7);
-}
-
-.team-item:hover .team-social a.btn:first-child {
-  opacity: 1;
-  margin-top: 0;
-  transition: 0.3s 0s;
-}
-
-.team-item:hover .team-social a.btn:nth-child(2) {
-  opacity: 1;
-  margin-top: 0;
-  transition: 0.3s 0.05s;
-}
-
-.team-item:hover .team-social a.btn:nth-child(3) {
-  opacity: 1;
-  margin-top: 0;
-  transition: 0.3s 0.1s;
-}
-
-.team-item:hover .team-social a.btn:nth-child(4) {
-  opacity: 1;
-  margin-top: 0;
-  transition: 0.3s 0.15s;
-}
-
-.team-item .team-img img,
-.blog-item .blog-img img {
+  display: inline-block;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  background: #dddddd;
+  border-radius: 10px;
   transition: 0.5s;
 }
 
-.team-item:hover .team-img img,
-.blog-item:hover .blog-img img {
-  transform: scale(1.15);
+.teams-carousel .owl-dot.active {
+  background: var(--primary);
+}
+
+.teams-container {
+  border: #d4d2d2 1px solid;
+  border-radius: 15px;
+  margin: 8px;
 }
 
 /*** Miscellaneous ***/
@@ -798,33 +809,6 @@ h6,
 
 .accordion .accordion-body {
   padding: 15px 0 0 0;
-}
-
-/*** Feature ***/
-.feature-item,
-.advanced-feature-item {
-  height: 100%;
-  transition: 0.5s;
-}
-
-.feature-item:hover {
-  margin-top: -15px;
-}
-
-.advanced-feature-item {
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
-}
-
-.advanced-feature-item * {
-  transition: 0.5s;
-}
-
-.advanced-feature-item:hover {
-  background: var(--primary);
-}
-
-.advanced-feature-item:hover * {
-  color: #ffffff !important;
 }
 
 /*--------------------------------------------------------------

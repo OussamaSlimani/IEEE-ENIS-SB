@@ -4,8 +4,15 @@
     <meta charset="utf-8" />
     <title>IEEE ENIS Student Branch</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Free HTML Templates" name="keywords" />
-    <meta content="Free HTML Templates" name="description" />
+    <meta
+      content="IEEE, ieee enis, National School of Engineers in Sfax, engineering, creativity, association, communication, training, competitions"
+      name="keywords"
+    />
+
+    <meta
+      content="Established in 2009, the IEEE branch at the National School of Engineers in Sfax fosters student motivation, creativity, association, and communication skills. It offers training sessions and competitions across various engineering disciplines."
+      name="description"
+    />
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" />
@@ -15,6 +22,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap"
       rel="stylesheet"
     />
 
@@ -49,21 +60,23 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Navbar Start -->
+    <!-- ==================== WEBSITE CONTENT START ==================== -->
+
+    <!-- ==========  Navbar Start ========== -->
     <div class="container-fluid position-relative p-0">
       <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
           <img
             id="main"
-            src="img/Logos/LOGO-white-03.png"
+            src="img/Logo/enis-sb-light.png"
             alt="Logo"
-            style="width: 255px; height: 40px"
+            style="height: 42px"
           />
           <img
             id="second"
-            src="img/Logos/LOGO-03.png"
+            src="img/Logo/enis-sb.png"
             alt="logo-white"
-            style="width: 255px; height: 40px; display: none"
+            style="height: 42px; display: none"
           />
         </a>
         <button
@@ -74,6 +87,8 @@
         >
           <span class="fa fa-bars"></span>
         </button>
+
+        <!-- links -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto py-0">
             <a href="index.html" class="nav-item nav-link">Home</a>
@@ -85,48 +100,48 @@
             <a href="upcoming.html" class="nav-item nav-link">Our upcoming</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
+
           <div class="col-lg-3 text-center text-lg-end">
-            <div class="d-inline-flex align-items-center" style="height: 100px">
-              <a
-                class="btn btn-outline-light btn-square rounded-circle me-2"
-                href="https://www.facebook.com/IEEE.ENIS.SB"
-                target="_blank"
-                ><i class="fab fa-facebook fw-normal"></i
-              ></a>
-              <a
-                class="btn btn-outline-light btn-square rounded-circle me-2"
-                href="https://www.instagram.com/ieeeenisstudentbranch/"
-                target="_blank"
-                ><i class="fab fa-instagram fw-normal"></i
-              ></a>
-              <a
-                class="btn btn-outline-light btn-square rounded-circle me-2"
-                href="https://www.linkedin.com/company/ieee-enis-student-branch-tunisia-section/mycompany/"
-                target="_blank"
-                ><i class="fab fa-linkedin-in fw-normal"></i
-              ></a>
+            <div class="d-inline-flex align-items-center">
+              <!-- Login Button -->
+              <button href="#" class="btn btn-primary py-2 px-4 m-3">
+                Login
+              </button>
+              <!-- Dark Mode Toggle Button -->
+              <button
+                id="darkModeToggleBtn"
+                onclick="toggleDarkMode()"
+                class="btn btn-outline-light btn-square rounded-circle me-2 dark-mode-toggle"
+              >
+                <i id="darkModeIcon" class="fas"></i>
+              </button>
             </div>
           </div>
         </div>
       </nav>
-
+      <!-- banner start -->
       <div
         class="container-fluid bg-primary py-5 bg-header"
         style="margin-bottom: 90px"
       >
         <div class="row py-5">
           <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">About Us</h1>
-            <a href="index.html" class="h5 text-white">Home</a>
+            <h1 class="display-4 text-white animated zoomIn">About</h1>
+            <a href="" class="h5 text-white">Home</a>
             <i class="far fa-circle text-white px-2"></i>
-            <a href="about.html" class="h5 text-white">About</a>
+            <a href="" class="h5 text-white">About</a>
           </div>
         </div>
       </div>
+      <!-- banner end -->
     </div>
-    <!-- Navbar End -->
+    <!-- ==========  Navbar End ========== -->
 
-    <!-- About Start -->
+    <div class="change-mode-animation-container d-none animated fadeIn">
+      <div class="change-mode-animation"></div>
+    </div>
+
+    <!-- ========== About Start ========== -->
     <div class="container-xxl about">
       <div class="container">
         <div class="row g-0">
@@ -139,17 +154,16 @@
                 type="button"
                 class="btn-play"
                 data-bs-toggle="modal"
-                data-src=""
                 data-bs-target="#videoModal"
               >
                 <span></span>
               </button>
             </div>
           </div>
-          <div class="col-lg-6 pt-lg-5 wow fadeIn mb-4" data-wow-delay="0.5s">
+          <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
             <div
-              class="bg-white p-5 mt-lg-5"
-              style="border-radius: 50px 50px 50px 50px"
+              class="body-about-us bg-light"
+              style="border-radius: 50px 50px 0px 0px"
             >
               <div class="section-title position-relative pb-3 mb-5">
                 <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
@@ -206,9 +220,9 @@
         </div>
       </div>
     </div>
-    <!-- About End -->
+    <!-- ========== About End ========== -->
 
-    <!-- Advanced Feature Start -->
+    <!--  ============== Goals Start  ============== -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
       <div class="container py-5">
         <div
@@ -218,7 +232,9 @@
           <h5 class="fw-bold text-primary text-uppercase">
             IEEE ENIS SB GOALS
           </h5>
-          <h1 class="mb-0">Four Key Objectives of the IEEE ENIS SB GOALS</h1>
+          <h1 class="mb-0 text-dark">
+            Four Key Objectives of the IEEE ENIS SB GOALS
+          </h1>
         </div>
         <div
           class="mx-auto text-center wow fadeInUp"
@@ -227,9 +243,9 @@
         ></div>
         <div class="row g-4">
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="advanced-feature-item text-center rounded py-5 px-4">
-              <i class="fa fa-laptop fa-3x text-primary mb-4"></i>
-              <h5 class="mb-3">Training and Competitions</h5>
+            <div class="goals-item text-center rounded py-5 px-4">
+              <i class="fa fa-laptop fa-3x text-dark mb-4"></i>
+              <h5 class="mb-3 text-dark">Training and Competitions</h5>
               <p class="m-0">
                 It encourages students to attend training sessions and
                 participate in competitions in various engineering fields.
@@ -237,9 +253,9 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="advanced-feature-item text-center rounded py-5 px-4">
-              <i class="fa fa-users fa-3x text-primary mb-4"></i>
-              <h5 class="mb-3">Team Building</h5>
+            <div class="goals-item text-center rounded py-5 px-4">
+              <i class="fa fa-users fa-3x text-dark mb-4"></i>
+              <h5 class="mb-3 text-dark">Team Building</h5>
               <p class="m-0">
                 Enhancing team-work skills and encouraging members to think
                 freely and suggest spontaneous new ideas through online
@@ -248,9 +264,9 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="advanced-feature-item text-center rounded py-5 px-4">
-              <i class="fa fa-calendar fa-3x text-primary mb-4"></i>
-              <h5 class="mb-3">Organizing Events</h5>
+            <div class="goals-item text-center rounded py-5 px-4">
+              <i class="fa fa-calendar fa-3x text-dark mb-4"></i>
+              <h5 class="mb-3 text-dark">Organizing Events</h5>
               <p class="m-0">
                 Organizes a variety of activities, including conferences,
                 industrial visits, entertainment events, and workshops.
@@ -258,9 +274,9 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="advanced-feature-item text-center rounded py-5 px-4">
-              <i class="fa fa-draw-polygon fa-3x text-primary mb-4"></i>
-              <h5 class="mb-3">Inspiring Creativity</h5>
+            <div class="goals-item text-center rounded py-5 px-4">
+              <i class="fa fa-draw-polygon fa-3x text-dark mb-4"></i>
+              <h5 class="mb-3 text-dark">Inspiring Creativity</h5>
               <p class="m-0">
                 Inspire and nurture the creative potential of students,
                 fostering their associative spirit and communication skills.
@@ -270,282 +286,227 @@
         </div>
       </div>
     </div>
-    <!-- Advanced Feature End -->
+    <!-- ============== Goals End  ============== -->
 
-    <!-- Team Start -->
-    <div id="team" class="container-xxl py-5">
-      <div class="container">
+    <!-- ========== Team SB Start ========== -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div
+        class="section-title text-center position-relative pb-2 mb-2 mx-auto"
+        style="max-width: 600px"
+      >
+        <h5 class="fw-bold text-primary text-uppercase">SB Members</h5>
+        <h1 class="mb-0 text-dark">Together We Lead Change.</h1>
+      </div>
+      <div class="container py-4 mb-2">
+        <div class="owl-carousel teams-carousel">
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-21.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Med Mahdi Bradai</h5>
+              <p class="text-primary">Chairman</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-27.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Siwar Gouirah</h5>
+              <p class="text-primary">Vice-Chairwoman</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-25.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Iheb Charfeddine</h5>
+              <p class="text-primary">Treasurer</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-29.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Hend Belkhiria</h5>
+              <p class="text-primary">Secretary</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-22.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Oussama Slimani</h5>
+              <p class="text-primary">Project Manager</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-26.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Chams Assil Chelly</h5>
+              <p class="text-primary">Project Manager</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-24.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Med Mahdi Gouiaa</h5>
+              <p class="text-primary">Media Manager</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-28.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Amir Abid</h5>
+              <p class="text-primary">Human Resources</p>
+            </div>
+          </div>
+          <!-- --- -->
+          <!-- --- -->
+          <div
+            class="position-relative rounded overflow-hidden teams-container"
+          >
+            <div class="overflow-hidden">
+              <img class="img-fluid" src="img/team/team-23.jpg" alt="" />
+            </div>
+            <div class="text-center p-2">
+              <h5 class="text-dark">Med Hedi Samet</h5>
+              <p class="text-primary">Webmaster</p>
+            </div>
+          </div>
+          <!-- --- -->
+        </div>
+      </div>
+    </div>
+    <!-- ========== Team SB End ==========-->
+
+    <!-- ======= More Section ======= -->
+    <section id="more" class="more">
+      <div class="container" data-aos="fade-up">
         <div
           class="section-title text-center position-relative pb-3 mb-5 mx-auto"
           style="max-width: 600px"
         >
-          <h5 class="fw-bold text-primary text-uppercase">SB Members</h5>
-          <h1 class="mb-0">Together We Lead Change.</h1>
+          <h5 class="fw-bold text-primary text-uppercase">IEEE ENIS SB</h5>
+          <h1 class="mb-0 text-dark">Learn more about us</h1>
         </div>
-        <div class="row g-4 d-flex justify-content-center mt-2">
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid"
-                  src="img/team/team2-04.jpg"
-                  alt="bilel"
-                />
-                <div class="team-social">
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="mailto:bilel.djemel@enis.tn"
-                    target="_blank"
-                    ><i class="bi bi-envelope fw-normal"></i>
-                  </a>
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="https://www.linkedin.com/in/bilel-djemel/"
-                    target="_blank"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                </div>
-              </div>
 
-              <div class="bg-light text-center p-2">
-                <h4 class="text-primary">Bilel Djemel</h4>
-                <p class="text-uppercase m-0">Chairman</p>
+        <div class="row gy-4">
+          <!-- ========== -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="more-box-container">
+              <div class="more-box text-center">
+                <img class="img-fluid m-4" src="img/Logo/ieee.png" alt="" />
+                <h3 class="text-dark">
+                  Institute of Electrical and Electronics Engineers
+                </h3>
+                <p class="text-start text-dark">
+                  IEEE fosters global tech collaboration in electrical and
+                  electronics engineering. It sets standards, publishes
+                  research, hosts events, and empowers members, shaping tech's
+                  future for humanity's benefit.
+                </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img position-relative overflow-hidden">
-                <img class="img-fluid" src="img/team/team2-05.jpg" alt="abir" />
-                <div class="team-social">
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="mailto:abir.grati@enis.tn"
-                    target="_blank"
-                    ><i class="bi bi-envelope fw-normal"></i>
-                  </a>
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="https://www.linkedin.com/in/abir-grati-/"
-                    target="_blank"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="bg-light text-center p-2">
-                <h4 class="text-primary">Abir Grati</h4>
-                <p class="text-uppercase m-0">Vice-Chaiwoman</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item">
-              <div class="team-img position-relative overflow-hidden">
+          <!-- ========== -->
+          <!-- ========== -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="more-box-container">
+              <div class="more-box text-center">
                 <img
-                  class="img-fluid"
-                  src="img/team/team2-07.jpg"
-                  alt="ayoub"
+                  class="img-fluid m-4"
+                  src="img/Logo/ieee-tunisia.png"
+                  alt=""
                 />
-                <div class="team-social">
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="mailto:ayoub.abdelkefi@enis.tn"
-                    target="_blank"
-                    ><i class="bi bi-envelope fw-normal"></i>
-                  </a>
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="https://www.linkedin.com/in/ayoub-abdelkefi-16a360237/"
-                    target="_blank"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="bg-light text-center p-2">
-                <h4 class="text-primary">Abdelkefi Ayoub</h4>
-                <p class="text-uppercase m-0">Treasurer</p>
+                <h3 class="text-dark">IEEE Tunisia Section</h3>
+                <p class="text-start text-dark">
+                  The IEEE Tunisia Section is a regional branch of the global
+                  IEEE organization that serves professionals and researchers in
+                  Tunisia, focusing on activities and events related to
+                  electrical and electronics engineering and related fields.
+                </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item">
-              <div class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid"
-                  src="img/team/team2-01.jpg"
-                  alt="takwa"
-                />
-                <div class="team-social">
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="mailto:takoua.jradi@enis.tn"
-                    target="_blank"
-                    ><i class="bi bi-envelope fw-normal"></i>
-                  </a>
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="https://www.linkedin.com/in/jradi-takoua/"
-                    target="_blank"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="bg-light text-center p-2">
-                <h4 class="text-primary">Takoua Jradi</h4>
-                <p class="text-uppercase m-0">Secretary</p>
+          <!-- ========== -->
+          <!-- ========== -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="more-box-container">
+              <div class="more-box text-center">
+                <img class="img-fluid m-4" src="img/Logo/enis.png" alt="" />
+                <h3 class="text-dark">National Engineering School of Sfax</h3>
+                <p class="text-start text-dark">
+                  Established in 1983, the National Engineering School of Sfax
+                  (ENIS) is renowned for its excellence in engineering
+                  education. It comprises seven departments, spanning various
+                  fields.
+                </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item">
-              <div class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid"
-                  src="img/team/team2-03.jpg"
-                  alt="cyrine"
-                />
-                <div class="team-social">
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="https://www.facebook.com/cyrine.laouini.90"
-                    target="_blank"
-                    ><i class="fab fa-facebook fw-normal"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="bg-light text-center p-2">
-                <h4 class="text-primary">Cyrine Auini</h4>
-                <p class="text-uppercase m-0">Project Manager</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="team-item">
-              <div class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid"
-                  src="img/team/team2-02.jpg"
-                  alt="racem"
-                />
-                <div class="team-social">
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="mailto:racem.moalla@enis.tn"
-                    target="_blank"
-                    ><i class="bi bi-envelope fw-normal"></i>
-                  </a>
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="https://www.linkedin.com/in/racem-moalla/"
-                    target="_blank"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="bg-light text-center p-2">
-                <h4 class="text-primary">Racem Moalla</h4>
-                <p class="text-uppercase m-0">Project Manager</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="team-item">
-              <div class="team-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid"
-                  src="img/team/team2-06.jpg"
-                  alt="cyrine2"
-                />
-                <div class="team-social">
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="https://www.facebook.com/mahdi.bradai.9"
-                    target="_blank"
-                    ><i class="bi bi-envelope fw-normal"></i>
-                  </a>
-                  <a
-                    class="btn btn-square btn-primary rounded-circle m-1"
-                    href="mailto:syrine.benkeji@enis.tn"
-                    target="_blank"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="bg-light text-center p-2">
-                <h4 class="text-primary">Syrine Benkaji</h4>
-                <p class="text-uppercase m-0">Media Manager</p>
-              </div>
-            </div>
-          </div>
+          <!-- ========== -->
         </div>
       </div>
-    </div>
-    <!-- Team End -->
+    </section>
+    <!-- ========== Chapters End ========== -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div
-          class="section-title text-center position-relative pb-3 mb-5 mx-auto"
-          style="max-width: 600px"
-        >
-          <h5 class="fw-bold text-primary text-uppercase">IEEE</h5>
-          <h1 class="mb-0">Learn more about us</h1>
-        </div>
-        <div
-          class="row g-4 justify-content-center wow fadeInUp"
-          data-wow-delay="0.5s"
-        >
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-white h-100 p-2 p-xl-5 wow fadeIn">
-              <img class="img-fluid mb-4" src="img/Logos/ieee.png" alt="" />
-              <h4 class="mb-3 text-center">
-                Institute of Electrical and Electronics Engineers
-              </h4>
-              <p>
-                IEEE fosters global tech collaboration in electrical and
-                electronics engineering. It sets standards, publishes research,
-                hosts events, and empowers members, shaping tech's future for
-                humanity's benefit.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-white h-100 p-2 p-xl-5 wow fadeIn">
-              <img
-                class="img-fluid mb-4"
-                src="img/Logos/ieee-section-02.png"
-                alt=""
-              />
-              <h4 class="mb-3 text-center">IEEE Tunisia Section</h4>
-              <p class="">
-                The IEEE Tunisia Section is a regional branch of the global IEEE
-                organization that serves professionals and researchers in
-                Tunisia, focusing on activities and events related to electrical
-                and electronics engineering and related fields.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="service-item bg-white h-100 p-2 p-xl-5 wow fadeIn">
-              <img class="img-fluid mb-4" src="img/Logos/sac2-02.png" alt="" />
-              <h4 class="mb-3 text-center">IEEE R8 SAC</h4>
-              <p class="">
-                IEEE Region 8 Student Activities Committee (SAC) coordinates
-                student programs, events, and opportunities in Europe, the
-                Middle East, and Africa, fostering academic and professional
-                development.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Service End -->
-
-    <!-- Footer Start -->
+    <!-- ========== Footer Start ========== -->
     <div
-      class="container-fluid bg-dark text-light mt-5 wow fadeInUp"
+      class="container-fluid bg-dark text-light mt-5 wow fadeInUp border-footer"
       data-wow-delay="0.1s"
     >
       <div class="container">
@@ -556,12 +517,12 @@
             >
               <a href="index.html" class="navbar-brand">
                 <img
-                  src="img/Logos/LOGO-white-03.png"
+                  src="img/Logo/enis-sb-light.png"
                   alt="logo-white"
-                  style="width: 255px"
+                  style="width: 150px"
                 />
               </a>
-              <p class="mt-3 mb-4">
+              <p class="mt-3 mb-4 text-white">
                 Since 2009, the IEEE branch has been founded at the National
                 School of Engineers in Sfax. Its main aim is to motivate
                 students, inspire them to support their creativity, foster their
@@ -577,21 +538,21 @@
                 <div
                   class="section-title section-title-sm position-relative pb-3 mb-4"
                 >
-                  <h3 class="text-light mb-0">Get In Touch</h3>
+                  <h3 class="text-white mb-0">Get In Touch</h3>
                 </div>
                 <div class="d-flex mb-2">
                   <i class="bi bi-geo-alt text-primary me-2"></i>
-                  <p class="mb-0">
+                  <p class="mb-0 text-white">
                     ENIS, Soukra Road km 3, BP 1173, Sfax, Tunisia.
                   </p>
                 </div>
                 <div class="d-flex mb-2">
                   <i class="bi bi-envelope-open text-primary me-2"></i>
-                  <p class="mb-0">sb.enis@ieee.org</p>
+                  <p class="mb-0 text-white">sb.enis@ieee.org</p>
                 </div>
                 <div class="d-flex mb-2">
                   <i class="bi bi-telephone text-primary me-2"></i>
-                  <p class="mb-0">+216 26 589 540</p>
+                  <p class="mb-0 text-white">+216 26 589 540</p>
                 </div>
                 <div class="d-flex mt-4">
                   <a class="btn btn-primary btn-square me-2" href="#"
@@ -609,30 +570,30 @@
                 <div
                   class="section-title section-title-sm position-relative pb-3 mb-4"
                 >
-                  <h3 class="text-light mb-0">Quick Links</h3>
+                  <h3 class="text-white mb-0">Quick Links</h3>
                 </div>
                 <div
                   class="link-animated d-flex flex-column justify-content-start"
                 >
-                  <a class="text-light mb-2" href="index.html"
+                  <a class="text-white mb-2" href="index.html"
                     ><i class="bi bi-arrow-right text-primary me-2"></i>Home</a
                   >
-                  <a class="text-light mb-2" href="about.html"
+                  <a class="text-white mb-2" href="about.html"
                     ><i class="bi bi-arrow-right text-primary me-2"></i>About</a
                   >
-                  <a class="text-light mb-2" href="chapters.html"
+                  <a class="text-white mb-2" href="chapters.html"
                     ><i class="bi bi-arrow-right text-primary me-2"></i
                     >Chapters</a
                   >
-                  <a class="text-light mb-2" href="activities.html"
+                  <a class="text-white mb-2" href="activities.html"
                     ><i class="bi bi-arrow-right text-primary me-2"></i
                     >Activities & Awards</a
                   >
-                  <a class="text-light mb-2" href="upcoming.html"
+                  <a class="text-white mb-2" href="upcoming.html"
                     ><i class="bi bi-arrow-right text-primary me-2"></i>Our
                     Upcoming</a
                   >
-                  <a class="text-light mb-2" href="contact.html"
+                  <a class="text-white mb-2" href="contact.html"
                     ><i class="bi bi-arrow-right text-primary me-2"></i>Our
                     Contact</a
                   >
@@ -642,16 +603,16 @@
                 <div
                   class="section-title section-title-sm position-relative pb-3 mb-4"
                 >
-                  <h3 class="text-light mb-0">Popular Links</h3>
+                  <h3 class="text-white mb-0">Other Links</h3>
                 </div>
                 <div
                   class="link-animated d-flex flex-column justify-content-start"
                 >
-                  <a class="text-light mb-2" href="about.html#team"
+                  <a class="text-white mb-2" href="about.html#team"
                     ><i class="bi bi-arrow-right text-primary me-2"></i>Meet The
                     Team</a
                   >
-                  <a class="text-light mb-2" href="index.html#register"
+                  <a class="text-white mb-2" href="index.html#register"
                     ><i class="bi bi-arrow-right text-primary me-2"></i
                     >Resgister Now</a
                   >
@@ -671,7 +632,7 @@
               style="height: 75px"
             >
               <p class="px-2">
-                Copyright &copy; All Rights Reserved. Designed by
+                Copyright &copy; All Rights Reserved. Developed and designed by
                 <a
                   href="https://www.linkedin.com/in/oussama-slimani/"
                   target="_blank"
@@ -683,7 +644,9 @@
         </div>
       </div>
     </div>
-    <!-- Footer End -->
+    <!-- ========== Footer End ========== -->
+
+    <!-- ==================== WEBSITE CONTENT END ==================== -->
 
     <!-- Back to Top -->
     <a
