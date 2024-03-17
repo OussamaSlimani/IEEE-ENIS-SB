@@ -118,6 +118,30 @@
     },
   });
 
+  // event carousel
+  $(".event-carousel").owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 1000,
+    dots: true,
+    loop: true,
+    center: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      576: {
+        items: 1,
+      },
+      768: {
+        items: 1,
+      },
+      992: {
+        items: 1,
+      },
+    },
+  });
+
   // Testimonials carousel
   $(".testimonial-carousel").owlCarousel({
     autoplay: true,

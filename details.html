@@ -121,7 +121,7 @@
       </nav>
       <!-- banner start -->
       <div
-        class="container-fluid bg-primary py-5 bg-dark"
+        class="container-fluid bg-primary py-5 bg-header"
         style="margin-bottom: 90px"
       >
         <div class="row py-5">
@@ -129,9 +129,9 @@
             <h1 class="display-4 text-white animated zoomIn">
               Activities & Awards
             </h1>
-            <a href="" class="h5 text-white"
-              >Take a look at what we've achieved so far!</a
-            >
+            <a href="" class="h5 text-white">Home</a>
+            <i class="far fa-circle text-white px-2"></i>
+            <a href="" class="h5 text-white">Activities & Awards</a>
           </div>
         </div>
       </div>
@@ -139,185 +139,217 @@
     </div>
     <!-- ==========  Navbar End ========== -->
 
+    <!-- ==========  Animation toggle the mode  ========== -->
+    <div class="change-mode-animation-container d-none animated fadeIn">
+      <div class="change-mode-animation"></div>
+    </div>
+    <!-- ========== Animation toggle the mode ========== -->
+    <!-- ==========  Animation toggle the mode  ========== -->
+    <div class="give-star-container d-none animated fadeIn">
+      <div class="give-star"></div>
+    </div>
+    <!-- ========== Animation toggle the mode ========== -->
+
     <!-- ======= Activities Start ======= -->
+
+    <!-- Blog Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="container py-3">
+      <div class="container py-5">
         <div class="row g-5">
-          <!-- item -->
-          <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-            <div class="blog-item bg-light rounded overflow-hidden">
-              <div class="blog-img position-relative overflow-hidden">
-                <img
-                  class="img-fluid"
-                  src="img/upload/dimension-33.jpg"
-                  alt=""
-                />
+          <div class="col-lg-8">
+            <!-- Blog Detail Start -->
+            <div class="mb-5">
+              <!-- ========== Chapter Start ========== -->
+              <div class="owl-carousel event-carousel">
+                <div class="event-image">
+                  <img
+                    src="img/upload/dimension-33.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="event-image">
+                  <img
+                    src="img/upload/dimension-33.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="event-image">
+                  <img
+                    src="img/upload/dimension-33.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- ========== Chapter End ==========-->
+              <h1 class="mb-4 mt-4 text-dark">
+                Diam dolor est labore duo ipsum clita sed et lorem tempor duo
+              </h1>
+              <p class="text-dark">
+                Sadipscing labore amet rebum est et justo gubergren. Et eirmod
+                ipsum sit diam ut magna lorem. Nonumy vero labore lorem sanctus
+                rebum et lorem magna kasd, stet amet magna accusam consetetur
+                eirmod. Kasd accusam sit ipsum sadipscing et at at sanctus et.
+                Ipsum sit gubergren dolores et, consetetur justo invidunt at et
+                aliquyam ut et vero clita. Diam sea sea no sed dolores diam
+                nonumy, gubergren sit stet no diam kasd vero. Diam dolor est
+                labore duo invidunt ipsum clita et, sed et lorem voluptua tempor
+                invidunt at est sanctus sanctus. Clita dolores sit kasd diam
+                takimata justo diam lorem sed. Magna amet sed rebum eos. Clita
+                no magna no dolor erat diam tempor rebum consetetur, sanctus
+                labore sed nonumy diam lorem amet eirmod. No at tempor sea diam
+                kasd, takimata ea nonumy elitr sadipscing gubergren erat.
+                Gubergren at lorem invidunt sadipscing rebum sit amet ut ut,
+                voluptua diam dolores at sadipscing stet. Clita dolor amet dolor
+                ipsum vero ea ea eos.
+              </p>
+            </div>
+            <!-- Blog Detail End -->
+          </div>
+
+          <!-- Sidebar Start -->
+          <div class="col-lg-4">
+            <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+              <div
+                class="section-title section-title-sm position-relative pb-3 mb-4"
+              >
+                <h3 class="mb-0 text-dark">
+                  <i class="fas fa fa-star me-2"></i>25 Stars
+                </h3>
+              </div>
+              <div
+                class="link-animated d-flex flex-column justify-content-start"
+              >
                 <a
-                  class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                  href=""
-                  >Web Design</a
+                  class="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2"
+                  href="#"
+                  id="giveStarLink"
+                  ><i class="bi bi-arrow-right me-2"></i>Give it a Star!</a
                 >
               </div>
-              <div class="p-4">
-                <div class="d-flex mb-3">
-                  <small class="me-3"
-                    ><i class="far fa-user text-primary me-2"></i>John
-                    Doe</small
-                  >
-                  <small
-                    ><i class="far fa-calendar-alt text-primary me-2"></i>01
-                    Jan, 2045</small
-                  >
-                </div>
-                <h4 class="mb-3">How to build a website</h4>
-                <p>
-                  Dolor et eos labore stet justo sed est sed sed sed dolor stet
-                  amet
-                </p>
-                <a class="text-uppercase" href=""
-                  >Read More <i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
             </div>
-          </div>
-          <!-- item -->
-          <!-- item -->
-          <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-            <div class="blog-item bg-light rounded overflow-hidden">
-              <div class="blog-img position-relative overflow-hidden">
+            <script>
+              document
+                .getElementById("giveStarLink")
+                .addEventListener("click", function (event) {
+                  event.preventDefault();
+
+                  // Show the give-star-container
+                  document
+                    .querySelector(".give-star-container")
+                    .classList.remove("d-none");
+
+                  // Remove the container after 3 seconds
+                  setTimeout(function () {
+                    document
+                      .querySelector(".give-star-container")
+                      .classList.add("d-none");
+                  }, 3000);
+                });
+            </script>
+
+            <!-- Comment List Start -->
+            <div class="mb-5">
+              <div
+                class="section-title section-title-sm position-relative pb-3 mb-4"
+              >
+                <h3 class="mb-0 text-dark">
+                  <i class="fa fa-comment me-2"></i>3 Comments
+                </h3>
+              </div>
+              <!-- comment -->
+              <div class="d-flex mb-4 border p-2">
                 <img
-                  class="img-fluid"
-                  src="img/upload/dimension-33.jpg"
-                  alt=""
+                  src="img/testimonial-1.jpg"
+                  class="img-fluid rounded"
+                  style="width: 45px; height: 45px"
                 />
-                <a
-                  class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                  href=""
-                  >Web Design</a
-                >
-              </div>
-              <div class="p-4">
-                <div class="d-flex mb-3">
-                  <small class="me-3"
-                    ><i class="far fa-user text-primary me-2"></i>John
-                    Doe</small
-                  >
-                  <small
-                    ><i class="far fa-calendar-alt text-primary me-2"></i>01
-                    Jan, 2045</small
-                  >
+                <div class="ps-3">
+                  <h6>
+                    <a href="">John Doe</a> <small><i>01 Jan 2045</i></small>
+                  </h6>
+                  <p>
+                    Diam amet duo labore stet elitr invidunt ea clita ipsum
+                    voluptua, tempor labore accusam ipsum et no at. Kasd diam
+                    tempor rebum magna dolores sed eirmod
+                  </p>
                 </div>
-                <h4 class="mb-3">How to build a website</h4>
-                <p>
-                  Dolor et eos labore stet justo sed est sed sed sed dolor stet
-                  amet
-                </p>
-                <a class="text-uppercase" href=""
-                  >Read More <i class="bi bi-arrow-right"></i
-                ></a>
               </div>
-            </div>
-          </div>
-          <!-- item -->
-          <!-- item -->
-          <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-            <div class="blog-item bg-light rounded overflow-hidden">
-              <div class="blog-img position-relative overflow-hidden">
+              <!-- comment -->
+              <!-- comment -->
+              <div class="d-flex mb-4 border p-2">
                 <img
-                  class="img-fluid"
-                  src="img/upload/dimension-33.jpg"
-                  alt=""
+                  src="img/testimonial-3.jpg"
+                  class="img-fluid rounded"
+                  style="width: 45px; height: 45px"
                 />
-                <a
-                  class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                  href=""
-                  >Web Design</a
-                >
-              </div>
-              <div class="p-4">
-                <div class="d-flex mb-3">
-                  <small class="me-3"
-                    ><i class="far fa-user text-primary me-2"></i>John
-                    Doe</small
-                  >
-                  <small
-                    ><i class="far fa-calendar-alt text-primary me-2"></i>01
-                    Jan, 2045</small
-                  >
+                <div class="ps-3">
+                  <h6>
+                    <a href="">John Doe</a> <small><i>01 Jan 2045</i></small>
+                  </h6>
+                  <p>
+                    Diam amet duo labore stet elitr invidunt ea clita ipsum
+                    voluptua, tempor labore accusam ipsum et no at. Kasd diam
+                    tempor rebum magna dolores sed eirmod
+                  </p>
                 </div>
-                <h4 class="mb-3">How to build a website</h4>
-                <p>
-                  Dolor et eos labore stet justo sed est sed sed sed dolor stet
-                  amet
-                </p>
-                <a class="text-uppercase" href=""
-                  >Read More <i class="bi bi-arrow-right"></i
-                ></a>
               </div>
-            </div>
-          </div>
-          <!-- item -->
-          <!-- item -->
-          <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-            <div class="blog-item bg-light rounded overflow-hidden">
-              <div class="blog-img position-relative overflow-hidden">
+              <!-- comment -->
+              <!-- comment -->
+              <div class="d-flex mb-4 border p-2">
                 <img
-                  class="img-fluid"
-                  src="img/upload/dimension-33.jpg"
-                  alt=""
+                  src="img/testimonial-2.jpg"
+                  class="img-fluid rounded"
+                  style="width: 45px; height: 45px"
                 />
-                <a
-                  class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                  href=""
-                  >Web Design</a
-                >
-              </div>
-              <div class="p-4">
-                <div class="d-flex mb-3">
-                  <small class="me-3"
-                    ><i class="far fa-user text-primary me-2"></i>John
-                    Doe</small
-                  >
-                  <small
-                    ><i class="far fa-calendar-alt text-primary me-2"></i>01
-                    Jan, 2045</small
-                  >
+                <div class="ps-3">
+                  <h6>
+                    <a href="">John Doe</a> <small><i>01 Jan 2045</i></small>
+                  </h6>
+                  <p>
+                    Diam amet duo labore stet elitr invidunt ea clita ipsum
+                    voluptua, tempor labore accusam ipsum et no at. Kasd diam
+                    tempor rebum magna dolores sed eirmod
+                  </p>
                 </div>
-                <h4 class="mb-3">How to build a website</h4>
-                <p>
-                  Dolor et eos labore stet justo sed est sed sed sed dolor stet
-                  amet
-                </p>
-                <a class="text-uppercase" href=""
-                  >Read More <i class="bi bi-arrow-right"></i
-                ></a>
               </div>
+              <!-- comment -->
             </div>
+            <!-- Comment List End -->
+
+            <!-- Comment Form Start -->
+            <div class="bg-light rounded p-4">
+              <div
+                class="section-title section-title-sm position-relative pb-3 mb-4"
+              >
+                <h3 class="mb-0">Leave A Comment</h3>
+              </div>
+              <form>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <textarea
+                      class="form-control bg-white border-0"
+                      rows="5"
+                      placeholder="Comment"
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100 py-2" type="submit">
+                      Leave Your Comment
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- Comment Form End -->
           </div>
-          <!-- item -->
-          <!-- item -->
+          <!-- Sidebar End -->
         </div>
       </div>
     </div>
-    <div class="wow slideInUp" data-wow-delay="0.1s">
-      <nav aria-label="Page navigation">
-        <ul class="pagination pagination-lg m-0">
-          <li class="page-item disabled">
-            <a class="page-link rounded-0" href="#" aria-label="Previous">
-              <span aria-hidden="true"><i class="bi bi-arrow-left"></i></span>
-            </a>
-          </li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link rounded-0" href="#" aria-label="Next">
-              <span aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <!-- Blog End -->
     <!-- ======= Activities Start  =======-->
 
     <!-- ========== Footer Start ========== -->
