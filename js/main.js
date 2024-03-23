@@ -211,3 +211,39 @@ if (savedDarkMode) {
   updateTextColors(isDarkMode);
   updateIcon(isDarkMode);
 }
+
+// countdown
+
+// Function to calculate and update countdown
+function updateCountdown(targetDate) {
+  // Get the target date
+  var targetTime = new Date(targetDate).getTime();
+
+  // Update the countdown every second
+  var countdownInterval = setInterval(function () {
+    // Get the current date and time
+    var currentTime = new Date().getTime();
+
+    // Calculate the difference in milliseconds
+    var difference = targetTime - currentTime;
+
+    // Check if the target date has passed
+    if (difference <= 0) {
+      clearInterval(countdownInterval); // Clear the interval
+      document.getElementById("countdown").innerHTML = "Event has passed"; // Update the message
+      return;
+    }
+
+    // Calculate days, hours, minutes, and seconds
+    var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    // Update the countdown display
+    document.getElementById("countdown").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  }, 1000); // Update every second
+}

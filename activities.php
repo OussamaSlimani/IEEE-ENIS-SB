@@ -93,22 +93,60 @@
   </div>
   <!-- ==========  Navbar End ========== -->
 
+  <!-- ==========  Animation toggle the mode  ========== -->
+  <div class="change-mode-animation-container d-none animated fadeIn">
+    <div class="change-mode-animation"></div>
+  </div>
+  <!-- ========== Animation toggle the mode ========== -->
+
   <?php
   // API URL
   $url = "https://events.vtools.ieee.org/RST/events/api/public/v4/events/list?limit=3000&?delta=now-6.months&category_id=2,3&span=now-6.months~&sort=-created-on";
   // List of spoids to filter events
   $chapters = array(
-    "STB03301" => "ENIS SB",
-    "SBA03301" => "WIE ENIS SAG",
-    "SBC03301A" => "AESS ENIS SBC",
-    "SBC03301B" => "CS ENIS SBC",
-    "SBC03301H" => "IAS ENIS SBC",
-    "SBC03301L" => "SSCS ENIS SBC",
-    "SBC03301E" => "RAS ENIS SBC",
-    "SBC03301G" => "CIS ENIS SBC",
-    "SBC03301J" => "PES ENIS SBC",
-    "SBC03301D" => "EMBS ENIS SBC"
+    "STB03301" => array(
+      "name" => "ENIS SB",
+      "sm_logo_path" => "img\logo-sm\sb.png",
+    ),
+    "SBA03301" => array(
+      "name" => "WIE ENIS SAG",
+      "sm_logo_path" => "img\logo-sm\wie.png",
+    ),
+    "SBC03301A" => array(
+      "name" => "AESS ENIS SBC",
+      "sm_logo_path" => "img\logo-sm\aess.png",
+    ),
+    "SBC03301B" => array(
+      "name" => "CS ENIS SBC",
+      "sm_logo_path" => "img\logo-sm\cs.png",
+      "border1" => "border-orange-radius-2",
+    ),
+    "SBC03301H" => array(
+      "name" => "IAS ENIS SBC",
+      "sm_logo_path" => "img\logo-sm\ias.png",
+    ),
+    "SBC03301L" => array(
+      "name" => "SSCS ENIS SBC",
+      "sm_logo_path" => "img\logo-sm\sscs.png",
+    ),
+    "SBC03301E" => array(
+      "name" => "RAS ENIS SBC",
+      "sm_logo_path" => "img/logo-sm/ras.png"
+    ),
+    "SBC03301G" => array(
+      "name" => "CIS ENIS SBC",
+      "sm_logo_path" => "img\logo-sm\cis.png",
+    ),
+    "SBC03301J" => array(
+      "name" => "PES ENIS SBC",
+      "sm_logo_path" => "img\logo-sm\pes.png",
+    ),
+    "SBC03301D" => array(
+      "name" => "EMBS ENIS SBC",
+      "sm_logo_path" => "img/logo-sm/embs.png",
+    )
   );
+
   $categories = array(
     "1" => "Professional",
     "2" => "Technical",
@@ -162,7 +200,7 @@
     $text = preg_replace('/\s+/', ' ', $text);
     $text = trim($text);
 
-    return substr($text, 0, 150) . "...";
+    return substr($text, 0, 200) . "...";
   }
 
 
@@ -176,25 +214,23 @@
         <?php
         if ($data !== null && isset($data['data'])) :
           foreach ($data['data'] as $event) :
-            if (isset($event['attributes']['primary-host']['spoid']) && array_key_exists($event['attributes']['primary-host']['spoid'], $chapters) &&   $current_date > substr($event['attributes']['start-time'], 0, 10)) :
-
+            if (isset($event['attributes']['primary-host']['spoid']) && array_key_exists($event['attributes']['primary-host']['spoid'], $chapters) &&  $current_date > substr($event['attributes']['start-time'], 0, 10)) :
         ?>
               <!-- ========== -->
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="container p-4 border border-primary-radius-2">
+                <div class="container p-4  border border-primary-radius-2">
                   <div class="border-bottom border-primary p-1 mb-4 d-flex justify-content-between align-items-center">
-                    <div>
+                    <div style="max-width: 80%;">
                       <h4 class="text-dark"><?php echo $event['attributes']['title']; ?></h4>
-                      <p class="text-dark">By <?php echo $chapters[$event['attributes']['primary-host']['spoid']] ?> </p>
+                      <p class="text-dark">By <?php echo $chapters[$event['attributes']['primary-host']['spoid']]['name'] ?> </p>
                     </div>
-                    <div class=" d-flex justify-content-center align-items-center">
-                      <img src="img/Logo/cis-small.png" alt="" />
+                    <div class="circle d-flex justify-content-center align-items-center">
+                      <img src="<?php echo $chapters[$event['attributes']['primary-host']['spoid']]['sm_logo_path'] ?>" alt="" />
                     </div>
                   </div>
                   <p class="act-description text-dark">
                     <?php echo extract_clean_text($event['attributes']['description']); ?>
                   </p>
-
                   <div class="d-flex justify-content-between">
                     <p class="text-dark">
                       <i class="fa fa-folder me-2"></i>Category
@@ -205,7 +241,7 @@
                     <p class="text-dark"><i class="fa fa-calendar me-2"></i>Date</p>
                     <p class="text-dark"><?php echo substr($event['attributes']['start-time'], 0, 10); ?></p>
                   </div>
-                  <div class="d-flex justify-content-between">
+                  <div class="d-flex justify-content-between mb-2">
                     <p class="text-dark">
                       <i class="fa fa-map-marker-alt me-2"></i>Location Type
                     </p>
@@ -217,7 +253,6 @@
 
                         echo "Physical";
                       }
-
                       ?>
                     </p>
                   </div>
