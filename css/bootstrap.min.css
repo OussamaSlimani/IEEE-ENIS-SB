@@ -6043,6 +6043,12 @@ fieldset:disabled .btn {
 .border-primary {
   border-color: #06a3da !important;
 }
+
+.border-primary-radius-2 {
+  border: #06a3da 2px solid !important;
+  border-radius: 12px;
+  
+}
 .border-secondary {
   border-color: #34ad54 !important;
 }

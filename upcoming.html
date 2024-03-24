@@ -47,7 +47,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -94,11 +94,9 @@
             <a href="index.html" class="nav-item nav-link">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="chapters.html" class="nav-item nav-link">Chapters</a>
-            <a href="activities.html" class="nav-item nav-link"
-              >Activities & Awards</a
-            >
+            <a href="activities.html" class="nav-item nav-link">Activities</a>
             <a href="upcoming.html" class="nav-item nav-link active"
-              >Our upcoming</a
+              >Upcoming</a
             >
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
@@ -106,14 +104,31 @@
           <div class="col-lg-3 text-center text-lg-end">
             <div class="d-inline-flex align-items-center">
               <!-- Login Button -->
-              <button href="#" class="btn btn-primary py-2 px-4 m-3">
-                Login
-              </button>
+
+              <a
+                class="btn btn-outline-light btn-square rounded-circle me-2"
+                href="https://www.facebook.com/IEEE.ENIS.SB"
+                target="_blank"
+                ><i class="fab fa-facebook fw-normal"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-square rounded-circle me-2"
+                href="https://www.instagram.com/ieeeenisstudentbranch/"
+                target="_blank"
+                ><i class="fab fa-instagram fw-normal"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-square rounded-circle me-2"
+                href="https://www.linkedin.com/company/ieee-enis-student-branch-tunisia-section/mycompany/"
+                target="_blank"
+                ><i class="fab fa-linkedin-in fw-normal"></i
+              ></a>
+
               <!-- Dark Mode Toggle Button -->
               <button
                 id="darkModeToggleBtn"
                 onclick="toggleDarkMode()"
-                class="btn btn-outline-light btn-square rounded-circle me-2 dark-mode-toggle"
+                class="btn btn-outline-light btn-square rounded-circle me-2 dark-mode-toggle mx-4"
               >
                 <i id="darkModeIcon" class="fas"></i>
               </button>
@@ -122,14 +137,16 @@
         </div>
       </nav>
       <!-- banner start -->
-      <div
-        class="container-fluid bg-primary py-5 bg-dark"
-        style="margin-bottom: 90px"
-      >
-        <div class="row py-5">
-          <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-            <h1 class="display-4 text-white animated zoomIn">Upcoming</h1>
-            <a href="" class="h5 text-white">Stay updated!</a>
+      <div class="container-fluid bg-primary py-5 bg-dark border-bottom">
+        <div class="row py-4">
+          <div class="col-12 pt-lg-5 mt-lg-5 text-center animated zoomIn">
+            <h1 class="display-4 text-white">Our Upcoming Activities!</h1>
+            <p class="text-white m-2 p-2">Powered by Vtools API Service</p>
+            <img
+              src="img/logo/vt-removebg-preview.png"
+              alt=""
+              style="width: 130px"
+            />
           </div>
         </div>
       </div>
@@ -143,186 +160,17 @@
     </div>
     <!-- ========== Animation toggle the mode ========== -->
 
-    <!-- ======= More Section ======= -->
-    <section id="more" class="more">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
+    <!-- ======= Activities Start ======= -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container py-3">
+        <div class="upcoming row g-5">
           <!-- ========== -->
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="container p-4 border">
-              <div class="border-bottom p-2 mb-4">
-                <h4 class="text-dark">Php workshops</h4>
-                <p class="text-dark">By CS ENIS SBC</p>
-              </div>
-              <p class="text-dark">
-                The IEEE Tunisia Section is a regional branch of the global IEEE
-                organization that serves professionals and researchers in
-                Tunisia, focusing on activities and events related to electrical
-                and electronics engineering and related fields.
-              </p>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-calendar me-2"></i>Date</p>
-                <p class="text-dark">12 Dec. 2023</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-clock me-2"></i>Time</p>
-                <p class="text-dark">13:30</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark">
-                  <i class="fa fa-map-marker me-2"></i>Location
-                </p>
-                <p class="text-dark">ENIS, 4c Center</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-user me-2"></i>Trainer</p>
-                <p class="text-dark">Kadhem Belghuith</p>
-              </div>
-              <div class="d-flex justify-content-center">
-                <a href="" class="btn btn-primary py-1 px-2 mt-2"
-                  >Registration Form</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- ========== -->
-          <!-- ========== -->
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="container p-4 border">
-              <div class="border-bottom p-2 mb-4">
-                <h4 class="text-dark">Php workshops</h4>
-                <p class="text-dark">By CS ENIS SBC</p>
-              </div>
-              <p class="text-dark">
-                The IEEE Tunisia Section is a regional branch of the global IEEE
-                organization that serves professionals and researchers in
-                Tunisia, focusing on activities and events related to electrical
-                and electronics engineering and related fields.
-              </p>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-calendar me-2"></i>Date</p>
-                <p class="text-dark">12 Dec. 2023</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-clock me-2"></i>Time</p>
-                <p class="text-dark">13:30</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark">
-                  <i class="fa fa-map-marker me-2"></i>Location
-                </p>
-                <p class="text-dark">ENIS, 4c Center</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-user me-2"></i>Trainer</p>
-                <p class="text-dark">Kadhem Belghuith</p>
-              </div>
-              <div class="d-flex justify-content-center">
-                <a href="" class="btn btn-primary py-1 px-2 mt-2"
-                  >Registration Form</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- ========== -->
-          <!-- ========== -->
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="container p-4 border">
-              <div class="border-bottom p-2 mb-4">
-                <h4 class="text-dark">Php workshops</h4>
-                <p class="text-dark">By CS ENIS SBC</p>
-              </div>
-              <p class="text-dark">
-                The IEEE Tunisia Section is a regional branch of the global IEEE
-                organization that serves professionals and researchers in
-                Tunisia, focusing on activities and events related to electrical
-                and electronics engineering and related fields.
-              </p>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-calendar me-2"></i>Date</p>
-                <p class="text-dark">12 Dec. 2023</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-clock me-2"></i>Time</p>
-                <p class="text-dark">13:30</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark">
-                  <i class="fa fa-map-marker me-2"></i>Location
-                </p>
-                <p class="text-dark">ENIS, 4c Center</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-user me-2"></i>Trainer</p>
-                <p class="text-dark">Kadhem Belghuith</p>
-              </div>
-              <div class="d-flex justify-content-center">
-                <a href="" class="btn btn-primary py-1 px-2 mt-2"
-                  >Registration Form</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- ========== -->
-          <!-- ========== -->
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="container p-4 border">
-              <div class="border-bottom p-2 mb-4">
-                <h4 class="text-dark">Php workshops</h4>
-                <p class="text-dark">By CS ENIS SBC</p>
-              </div>
-              <p class="text-dark">
-                The IEEE Tunisia Section is a regional branch of the global IEEE
-                organization that serves professionals and researchers in
-                Tunisia, focusing on activities and events related to electrical
-                and electronics engineering and related fields.
-              </p>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-calendar me-2"></i>Date</p>
-                <p class="text-dark">12 Dec. 2023</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-clock me-2"></i>Time</p>
-                <p class="text-dark">13:30</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark">
-                  <i class="fa fa-map-marker me-2"></i>Location
-                </p>
-                <p class="text-dark">ENIS, 4c Center</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <p class="text-dark"><i class="fa fa-user me-2"></i>Trainer</p>
-                <p class="text-dark">Kadhem Belghuith</p>
-              </div>
-              <div class="d-flex justify-content-center">
-                <a href="" class="btn btn-primary py-1 px-2 mt-2"
-                  >Registration Form</a
-                >
-              </div>
-            </div>
-          </div>
+
           <!-- ========== -->
         </div>
       </div>
-    </section>
-    <!-- ========== Chapters End ========== -->
+    </div>
+    <!-- ======= Activities End  =======-->
 
     <!-- ========== Footer Start ========== -->
     <div
@@ -372,7 +220,7 @@
                 </div>
                 <div class="d-flex mb-2">
                   <i class="bi bi-telephone text-primary me-2"></i>
-                  <p class="mb-0 text-white">+216 26 589 540</p>
+                  <p class="mb-0 text-white">+216 28 675 568</p>
                 </div>
                 <div class="d-flex mt-4">
                   <a class="btn btn-primary btn-square me-2" href="#"
@@ -407,10 +255,10 @@
                   >
                   <a class="text-white mb-2" href="activities.html"
                     ><i class="bi bi-arrow-right text-primary me-2"></i
-                    >Activities & Awards</a
+                    >Activities</a
                   >
                   <a class="text-white mb-2" href="upcoming.html"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i>Our
+                    ><i class="bi bi-arrow-right text-primary me-2"></i>
                     Upcoming</a
                   >
                   <a class="text-white mb-2" href="contact.html"
@@ -472,7 +320,8 @@
     <a
       href="#"
       class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
-      ><div class="p-1"></div>
+    >
+      <div class="p-1"></div>
       <i class="bi bi-arrow-up"></i>
     </a>
 
