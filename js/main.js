@@ -183,6 +183,7 @@ function toggleDarkMode() {
     changeModeAnimationContainer.classList.add("d-none");
   }, 2000);
 }
+
 function updateTextColors(isDarkMode) {
   const textElements = document.querySelectorAll(".text-dark, .text-light");
   textElements.forEach((element) => {
@@ -246,4 +247,15 @@ function updateCountdown(targetDate) {
     document.getElementById("countdown").innerHTML =
       days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
   }, 1000); // Update every second
+}
+
+function goToActivities() {
+  window.location.href = "activities.php";
+  const changeModeAnimationContainer = document.querySelector(
+    ".change-page-animation-container"
+  );
+  changeModeAnimationContainer.classList.remove("d-none");
+  setTimeout(() => {
+    changeModeAnimationContainer.classList.add("d-none");
+  }, 30000);
 }

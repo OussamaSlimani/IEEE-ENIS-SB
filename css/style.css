@@ -99,9 +99,27 @@
   align-items: center;
 }
 
-/* =============== Give a star =============== */
-.give-star-container {
-  background-color: rgba(9, 30, 62, 0.8);
+/* ** Change the page animations ** */
+.change-page-animation {
+  width: fit-content;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 8px;
+  background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+  animation: l2 2s linear infinite;
+}
+.change-page-animation:before {
+  content: "Waiting data from Vtools API request...";
+}
+@keyframes l2 {
+  to {
+    background-size: 100% 3px;
+  }
+}
+
+.change-page-animation-container {
+  background-color: rgba(9, 30, 62, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -112,38 +130,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.give-star {
-  --s: 40px;
-  height: calc(var(--s) * 0.9);
-  width: calc(var(--s) * 5);
-  --v1: transparent, #000 0.5deg 108deg, #0000 109deg;
-  --v2: transparent, #000 0.5deg 36deg, #0000 37deg;
-  -webkit-mask: conic-gradient(
-      from 54deg at calc(var(--s) * 0.68) calc(var(--s) * 0.57),
-      var(--v1)
-    ),
-    conic-gradient(
-      from 90deg at calc(var(--s) * 0.02) calc(var(--s) * 0.35),
-      var(--v2)
-    ),
-    conic-gradient(
-      from 126deg at calc(var(--s) * 0.5) calc(var(--s) * 0.7),
-      var(--v1)
-    ),
-    conic-gradient(from 162deg at calc(var(--s) * 0.5) 0, var(--v2));
-  -webkit-mask-size: var(--s) var(--s);
-  -webkit-mask-composite: xor, destination-over;
-  mask-composite: exclude, add;
-  -webkit-mask-repeat: repeat-x;
-  background: linear-gradient(#ffb940 0 0) left/0% 100% #ddd no-repeat;
-  animation: l20 2s infinite linear;
-}
-@keyframes l20 {
-  90%,
-  100% {
-    background-size: 100% 100%;
-  }
 }
 
 /*=============== Heading ===============*/
@@ -808,6 +794,8 @@ h6,
 .act-description {
   text-align: justify;
 }
+
+/* ========== wait Vtools data  ========= */
 
 /*** Miscellaneous ***/
 @media (min-width: 991.98px) {

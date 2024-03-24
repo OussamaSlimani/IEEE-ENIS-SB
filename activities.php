@@ -59,7 +59,7 @@
           <a href="index.html" class="nav-item nav-link">Home</a>
           <a href="about.html" class="nav-item nav-link">About</a>
           <a href="chapters.html" class="nav-item nav-link">Chapters</a>
-          <a href="activities.html" class="nav-item nav-link active">Activities & Awards</a>
+          <a href="activities.html" class="nav-item nav-link active">Activities</a>
           <a href="upcoming.html" class="nav-item nav-link">Our upcoming</a>
           <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>
@@ -83,9 +83,10 @@
       <div class="row py-5">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center">
           <h1 class="display-4 text-white animated zoomIn">
-            Activities & Awards
+            Our Recent Activities!
           </h1>
-          <a href="" class="h5 text-white">Take a look at what we've achieved so far!</a>
+          <p class="text-white m-2 p-2">Powered by Vtools API service</p>
+          <img src="img/logo/vt-removebg-preview.png" alt="" style="width: 120px;">
         </div>
       </div>
     </div>
@@ -101,7 +102,7 @@
 
   <?php
   // API URL
-  $url = "https://events.vtools.ieee.org/RST/events/api/public/v4/events/list?limit=3000&?delta=now-6.months&category_id=2,3&span=now-6.months~&sort=-created-on";
+  $url = "https://events.vtools.ieee.org/RST/events/api/public/v4/events/list?limit=2000&&country_id=212?delta=now-6.months&category_id=2,3&span=now-6.months~&sort=-created-on";
   // List of spoids to filter events
   $chapters = array(
     "STB03301" => array(
@@ -214,7 +215,7 @@
         <?php
         if ($data !== null && isset($data['data'])) :
           foreach ($data['data'] as $event) :
-            if (isset($event['attributes']['primary-host']['spoid']) && array_key_exists($event['attributes']['primary-host']['spoid'], $chapters) &&  $current_date > substr($event['attributes']['start-time'], 0, 10)) :
+            if (isset($event['attributes']['primary-host']['spoid']) && array_key_exists($event['attributes']['primary-host']['spoid'], $chapters)) :
         ?>
               <!-- ========== -->
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -239,7 +240,16 @@
                   </div>
                   <div class="d-flex justify-content-between">
                     <p class="text-dark"><i class="fa fa-calendar me-2"></i>Date</p>
-                    <p class="text-dark"><?php echo substr($event['attributes']['start-time'], 0, 10); ?></p>
+                    <p class="text-dark">
+                      <?php
+                      if ($current_date > substr($event['attributes']['start-time'], 0, 10)) {
+                        echo substr($event['attributes']['start-time'], 0, 10);
+                      } else {
+                        echo "<span class='text-danger'>Upcoming! </span>" . substr($event['attributes']['start-time'], 0, 10);
+                      }
+                      ?>
+                    </p>
+
                   </div>
                   <div class="d-flex justify-content-between mb-2">
                     <p class="text-dark">

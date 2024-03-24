@@ -101,10 +101,13 @@
             <a href="index.html" class="nav-item nav-link active">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="chapters.html" class="nav-item nav-link">Chapters</a>
-            <a href="activities.html" class="nav-item nav-link"
-              >Activities & Awards</a
+            <a
+              href="activities.php"
+              onclick="goToActivities()"
+              class="nav-item nav-link"
+              >Activities</a
             >
-            <a href="upcoming.html" class="nav-item nav-link">Our upcoming</a>
+            <a href="upcoming.php" class="nav-item nav-link">Our upcoming</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
 
@@ -132,6 +135,9 @@
     <!-- ==========  Animation toggle the mode  ========== -->
     <div class="change-mode-animation-container d-none animated fadeIn">
       <div class="change-mode-animation"></div>
+    </div>
+    <div class="change-page-animation-container d-none animated fadeIn">
+      <div class="change-page-animation"></div>
     </div>
     <!-- ========== Animation toggle the mode ========== -->
 

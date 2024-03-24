@@ -131,7 +131,7 @@
     ),
     "SBC03301E" => array(
       "name" => "RAS ENIS SBC",
-      "sm_logo_path" => "img\logo-sm\ras.png",
+      "sm_logo_path" => "img/logo-sm/ras.png",
     ),
     "SBC03301G" => array(
       "name" => "CIS ENIS SBC",
@@ -143,7 +143,7 @@
     ),
     "SBC03301D" => array(
       "name" => "EMBS ENIS SBC",
-      "sm_logo_path" => "img\logo-sm\embs.png",
+      "sm_logo_path" => "img/logo-sm/embs.png",
     )
   );
 
@@ -215,7 +215,6 @@
         if ($data !== null && isset($data['data'])) :
           foreach ($data['data'] as $event) :
             if (isset($event['attributes']['primary-host']['spoid']) && array_key_exists($event['attributes']['primary-host']['spoid'], $chapters) &&   $current_date < substr($event['attributes']['start-time'], 0, 10)) :
-
         ?>
               <!-- ========== -->
               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
