@@ -259,3 +259,66 @@ function goToActivities() {
     changeModeAnimationContainer.classList.add("d-none");
   }, 30000);
 }
+
+// Assuming you have jQuery included in your project for easier DOM manipulation
+$(document).ready(function () {
+  $.getJSON("filtered_events.json", function (data) {
+    // Loop through each activity object in the JSON data
+    $.each(data, function (index, activity) {
+      // Construct HTML for each activity
+      var activityHTML = `
+            <!-- ========== -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="container p-4 border border-primary-radius-2">
+                <div
+                  class="border-bottom border-primary p-1 mb-4 d-flex justify-content-between align-items-center"
+                >
+                  <div style="max-width: 80%">
+                    <h4 class="text-dark">${activity.title}</h4>
+                    <p class="text-dark">By ${activity.chapter}</p>
+                  </div>
+                  <div
+                    class="circle d-flex justify-content-center align-items-center"
+                  >
+                    <img src="${activity.chapter_logo_path}" alt="" />
+                  </div>
+                </div>
+                <p class="act-description text-dark">${activity.description}</p>
+                <div class="d-flex justify-content-between">
+                  <p class="text-dark">
+                    <i class="fa fa-folder me-2"></i>Category
+                  </p>
+                  <p class="text-dark">${activity.category}</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="text-dark"><i class="fa fa-calendar me-2"></i>Date</p>
+                  <p class="text-dark">${activity.date}</p>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-dark">
+                    <i class="fa fa-map-marker-alt me-2"></i>Location Type
+                  </p>
+                  <p class="text-dark">${activity.location_type}</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <a href="${activity.link}" target="_blank" class="btn btn-primary mt-1"
+                    >Vtools Link</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- ========== -->`;
+
+      // Append the HTML for this activity to the corresponding container based on the 'type' key
+      if (activity.type === "event") {
+        $("div.activities.row.g-5").append(activityHTML);
+      } else if (activity.type === "upcoming") {
+        $("div.upcoming.row.g-5").append(activityHTML);
+      }
+    });
+  });
+});
